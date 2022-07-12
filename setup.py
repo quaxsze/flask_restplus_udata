@@ -53,13 +53,6 @@ def pip(filename):
     return requirements
 
 
-long_description = '\n'.join((
-    rst('README.rst'),
-    rst('CHANGELOG.rst'),
-    ''
-))
-
-
 exec(compile(open('flask_restplus_udata/__about__.py').read(), 'flask_restplus_udata/__about__.py', 'exec'))
 
 install_requires = pip('install')
@@ -70,11 +63,9 @@ dev_require = tests_require + pip('develop')
 setup(
     name='flask-restplus-udata-udata',
     version=__version__,
-    description=__description__,
-    long_description=long_description,
+    description="Temporary fork for update",
     url='https://github.com/quaxsze/flask_restplus_udata',
-    author='Axel Haustant',
-    author_email='axel@data.gouv.fr',
+    author='quaxzse',
     packages=find_packages(exclude=['tests', 'tests.*']),
     include_package_data=True,
     install_requires=install_requires,
