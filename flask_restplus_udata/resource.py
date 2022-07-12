@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from flask import request
 from flask.views import MethodView
-from werkzeug.wrappers import BaseResponse
+from werkzeug.wrappers import Response
 
 from .model import ModelBase
 
@@ -20,7 +20,7 @@ class Resource(MethodView):
     the API will return a response with status 405 Method Not Allowed.
     Otherwise the appropriate method is called and passed all arguments
     from the url rule used when adding the resource to an Api instance.
-    See :meth:`~flask_restplus.Api.add_resource` for details.
+    See :meth:`~flask_restplus_udata.Api.add_resource` for details.
     '''
 
     representations = None
@@ -43,7 +43,7 @@ class Resource(MethodView):
 
         resp = meth(*args, **kwargs)
 
-        if isinstance(resp, BaseResponse):
+        if isinstance(resp, Response):
             return resp
 
         representations = self.representations or {}

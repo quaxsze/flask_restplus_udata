@@ -59,7 +59,7 @@ copyright = u'2014, Axel Haustant'
 # built documents.
 #
 # The full version, including alpha/beta/rc tags.
-release = __import__('flask_restplus').__version__
+release = __import__('flask_restplus_udata').__version__
 # The short X.Y version.
 version = '.'.join(release.split('.')[:1])
 

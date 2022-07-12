@@ -1,6 +1,6 @@
 import logging
 
-import flask_restplus as restplus
+import flask_restplus_udata as restplus
 
 
 class LoggingTest(object):

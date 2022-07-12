@@ -14,7 +14,7 @@ import pytz
 import pytest
 
 from flask import Blueprint
-from flask_restplus import fields, Api
+from flask_restplus_udata import fields, Api
 
 
 class FieldTestCase(object):

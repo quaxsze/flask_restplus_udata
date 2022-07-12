@@ -296,7 +296,7 @@ class RequestParser(object):
     Enables adding and parsing of multiple arguments in the context of a single request.
     Ex::
 
-        from flask_restplus import RequestParser
+        from flask_restplus_udata import RequestParser
 
         parser = RequestParser()
         parser.add_argument('foo')

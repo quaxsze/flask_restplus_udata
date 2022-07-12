@@ -60,7 +60,7 @@ long_description = '\n'.join((
 ))
 
 
-exec(compile(open('flask_restplus/__about__.py').read(), 'flask_restplus/__about__.py', 'exec'))
+exec(compile(open('flask_restplus_udata/__about__.py').read(), 'flask_restplus_udata/__about__.py', 'exec'))
 
 install_requires = pip('install')
 doc_require = pip('doc')

@@ -20,15 +20,15 @@ from types import MethodType
 
 from flask import url_for, request, current_app
 from flask import make_response as original_flask_make_response
-from flask.helpers import _endpoint_from_view_func
+from flask.scaffold import _endpoint_from_view_func
 from flask.signals import got_request_exception
 
 from jsonschema import RefResolver
 
-from werkzeug import cached_property
+from werkzeug.utils import cached_property
 from werkzeug.datastructures import Headers
 from werkzeug.exceptions import HTTPException, MethodNotAllowed, NotFound, NotAcceptable, InternalServerError
-from werkzeug.wrappers import BaseResponse
+from werkzeug.wrappers import Response
 
 from . import apidoc
 from .mask import ParseError, MaskError
@@ -337,7 +337,7 @@ class Api(object):
         @wraps(resource)
         def wrapper(*args, **kwargs):
             resp = resource(*args, **kwargs)
-            if isinstance(resp, BaseResponse):
+            if isinstance(resp, Response):
                 return resp
             data, code, headers = unpack(resp)
             return self.make_response(data, code, headers=headers)
@@ -753,7 +753,7 @@ class Api(object):
         '''
         Synchronize prefix between blueprint/api and registration options, then
         perform initialization with setup_state.app :class:`flask.Flask` object.
-        When a :class:`flask_restplus.Api` object is initialized with a blueprint,
+        When a :class:`flask_restplus_udata.Api` object is initialized with a blueprint,
         this method is recorded on the blueprint to be run when the blueprint is later
         registered to a :class:`flask.Flask` object.  This method also monkeypatches
         BlueprintSetupState.add_url_rule with _blueprint_setup_add_url_rule_patch.

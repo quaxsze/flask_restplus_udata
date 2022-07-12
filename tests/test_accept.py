@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import flask_restplus as restplus
+import flask_restplus_udata as restplus
 
 
 class Foo(restplus.Resource):

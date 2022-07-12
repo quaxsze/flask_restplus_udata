@@ -7,7 +7,7 @@ import pytest
 from flask import Flask, Blueprint
 from flask.testing import FlaskClient
 
-import flask_restplus as restplus
+import flask_restplus_udata as restplus
 
 
 class TestClient(FlaskClient):

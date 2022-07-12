@@ -1,4 +1,4 @@
-from flask_restplus import Namespace, Resource, fields
+from flask_restplus_udata import Namespace, Resource, fields
 
 api = Namespace('dogs', description='Dogs related operations')
 

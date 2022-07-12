@@ -1,5 +1,5 @@
 from flask import Flask, request
-from flask_restplus import Resource, Api
+from flask_restplus_udata import Resource, Api
 
 app = Flask(__name__)
 api = Api(app)
@@ -40,5 +40,3 @@ class TodoSimple(Resource):
 
 if __name__ == '__main__':
     app.run(debug=False)
-
-
