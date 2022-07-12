@@ -1,7 +1,7 @@
 Authors
 =======
 
-Thanks to all of Flask-RESTPlus contributors (including those of initial flask-restful):
+Thanks to all of flask-restplus-udata contributors (including those of initial flask-restful):
 
 
 - Alex Gaynor

@@ -1,9 +1,9 @@
 Contributing
 ============
 
-flask-restplus is open-source and very open to contributions. 
+flask-restplus-udata is open-source and very open to contributions.
 
-If you're part of a corporation with an NDA, and you may require updating the license. 
+If you're part of a corporation with an NDA, and you may require updating the license.
 See Updating Copyright below
 
 Submitting issues
@@ -14,7 +14,7 @@ to submit reports on the `official bugtracker`_.
 
 Provide as much informations as possible to specify the issues:
 
-- the flask-restplus version used
+- the flask-restplus-udata version used
 - a stacktrace
 - installed applications list
 - a code sample to reproduce the issue
@@ -26,7 +26,7 @@ Submitting patches (bugfix, features, ...)
 
 If you want to contribute some code:
 
-1. fork the `official flask-restplus repository`_
+1. fork the `official flask-restplus-udata repository`_
 2. Ensure an issue is opened for your feature or bug
 3. create a branch with an explicit name (like ``my-new-feature`` or ``issue-XX``)
 4. do your work in it
@@ -35,7 +35,7 @@ If you want to contribute some code:
 7. add your change to the changelog
 8. submit your pull-request
 9. 2 Maintainers should review the code for bugfix and features. 1 maintainer for minor changes (such as docs)
-10. After review, a maintainer a will merge the PR. Maintainers should not merge their own PRs 
+10. After review, a maintainer a will merge the PR. Maintainers should not merge their own PRs
 
 There are some rules to follow:
 
@@ -44,7 +44,7 @@ There are some rules to follow:
 - your code should be mostly PEP8 compatible with a 120 characters line length
 - your contribution should support both Python 2 and 3 (use ``tox`` to test)
 
-You need to install some dependencies to develop on flask-restplus:
+You need to install some dependencies to develop on flask-restplus-udata:
 
 .. code-block:: console
 
@@ -76,7 +76,7 @@ and ensure the documentation is generating.
 
     $ tox
 
-You also need to ensure your code is compliant with the flask-restplus coding standards:
+You also need to ensure your code is compliant with the flask-restplus-udata coding standards:
 
 .. code-block:: console
 
@@ -91,8 +91,8 @@ To ensure everything is fine before commiting, you can launch the all in one com
 It will ensure the code meet the coding conventions, runs on every version on python
 and the documentation is properly generating.
 
-.. _official flask-restplus repository: https://github.com/noirbizarre/flask-restplus
-.. _official bugtracker: https://github.com/noirbizarre/flask-restplus/issues
+.. _official flask-restplus-udata repository: https://github.com/noirbizarre/flask-restplus-udata
+.. _official bugtracker: https://github.com/noirbizarre/flask-restplus-udata/issues
 
 Running a local Swagger Server
 ------------------------------
@@ -103,7 +103,7 @@ For local development, you may wish to run a local server. running the following
 
     $ inv assets
 
-NOTE: You'll need `NPM <https://docs.npmjs.com/getting-started/>`_ installed to do this. 
+NOTE: You'll need `NPM <https://docs.npmjs.com/getting-started/>`_ installed to do this.
 If you're new to NPM, also check out `nvm <https://github.com/creationix/nvm/blob/master/README.md>`_
 
 

@@ -10,7 +10,7 @@ from json import dumps, JSONEncoder
 from flask import Blueprint, redirect, views
 from werkzeug.exceptions import HTTPException, Unauthorized, BadRequest
 
-import flask_restplus as restplus
+import flask_restplus_udata as restplus
 
 
 # Add a dummy Resource to verify that the app is properly set.
@@ -31,7 +31,7 @@ class APITest(object):
         response = mocker.Mock()
         response.headers = {}
         response = api.unauthorized(response)
-        assert response.headers['WWW-Authenticate'] == 'Basic realm="flask-restplus"'
+        assert response.headers['WWW-Authenticate'] == 'Basic realm="flask-restplus-udata"'
 
     @pytest.mark.options(HTTP_BASIC_AUTH_REALM='Foo')
     @pytest.mark.api(serve_challenge_on_401=True)
@@ -54,7 +54,7 @@ class APITest(object):
 
         resp = api.handle_error(exception)
         assert resp.status_code == 401
-        assert resp.headers['WWW-Authenticate'] == 'Basic realm="flask-restplus"'
+        assert resp.headers['WWW-Authenticate'] == 'Basic realm="flask-restplus-udata"'
 
     @pytest.mark.api(serve_challenge_on_401=True)
     @pytest.mark.options(HTTP_BASIC_AUTH_REALM='test-realm')

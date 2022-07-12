@@ -1,8 +1,8 @@
 {
-  "name": "flask-restplus",
+  "name": "flask-restplus-udata",
   "version": "0.10.1",
   "description": "Fully featured framework for fast, easy and documented API development with Flask",
-  "repository": "noirbizarre/flask-restplus",
+  "repository": "noirbizarre/flask-restplus-udata",
   "keywords": [
     "swagger",
     "flask"

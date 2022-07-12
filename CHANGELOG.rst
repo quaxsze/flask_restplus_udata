@@ -1,7 +1,7 @@
 Changelog
 =========
 
-.. currentmodule:: flask_restplus
+.. currentmodule:: flask_restplus_udata
 
 0.14.0 (2022-07-12)
 -------------------
@@ -78,7 +78,7 @@ Breaking changes
 0.10.1 (2017-03-04)
 -------------------
 
-- Fix a typo in ``__init__`` breaking ``from flask_restplus import *`` (:issue:`242`)
+- Fix a typo in ``__init__`` breaking ``from flask_restplus_udata import *`` (:issue:`242`)
 - Basic support for custom URL converters (:issue:`243`)
 - Support custom response classes inheriting from :class:`~werkzeug.wrappers.BaseResponse` (:issue:`245`)
 - Allow models to preserve order (:issue:`135`)
@@ -141,8 +141,8 @@ Breaking changes
 
 - Handle mask on :class:`~fields.Polymorph` field
 - Handle mask on inherited models
-- Replace `flask_restful.abort` by :func:`flask_restplus.errors.abort`
-- Replace `flask_restful.unpack` by :func:`flask_restplus.utils.unpack`
+- Replace `flask_restful.abort` by :func:`flask_restplus_udata.errors.abort`
+- Replace `flask_restful.unpack` by :func:`flask_restplus_udata.utils.unpack`
 - **Breaking changes**:
     - Renamed ``ApiModel`` into :class:`Model`
     - Renamed ``ApiNamespace`` into :class:`Namespace`
@@ -167,7 +167,7 @@ Breaking changes
 ------------------
 
 - Drop/merge flask-restful fields
-- Drop/merge flask-restplus inputs
+- Drop/merge flask-restplus-udata inputs
 - Update Swagger-UI to version 2.1.3
 - Use minified version of Swagger-UI if ``DEBUG=False``
 - Blueprint subdomain support (static only)
@@ -189,7 +189,7 @@ Breaking changes
     - allow to register a custom URL with the ``doc`` parameter
     - allow to disable documentation with ``doc=False``
 - Added fields mask support through header (see: :doc:`Fields Masks Documentation </mask>`)
-- Expose ``flask_restful.inputs`` module on ``flask_restplus.inputs``
+- Expose ``flask_restful.inputs`` module on ``flask_restplus_udata.inputs``
 - Added support for some missing fields and attributes:
     - ``host`` root field (filed only if ``SERVER_NAME`` config is set)
     - custom ``tags`` root field

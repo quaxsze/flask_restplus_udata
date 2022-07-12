@@ -1,7 +1,7 @@
 Error handling
 ==============
 
-.. currentmodule:: flask_restplus
+.. currentmodule:: flask_restplus_udata
 
 HTTPException handling
 ----------------------
@@ -91,7 +91,7 @@ will output
     }
 
 
-The Flask-RESTPlus abort helper
+The flask-restplus-udata abort helper
 -------------------------------
 
 The :func:`errors.abort` and the :meth:`Namespace.abort` helpers
@@ -100,7 +100,7 @@ but it will also add the keyword arguments to the response.
 
 .. code-block:: python
 
-    from flask_restplus import abort
+    from flask_restplus_udata import abort
     abort(400, custom='value')
 
 will return a 400 HTTP code and output
@@ -141,8 +141,8 @@ that you can do with Flask/Blueprint :meth:`@errorhandler <flask:flask.Flask.err
     @api.errorhandler(RootException)
     def handle_root_exception(error):
         '''Return a custom message and 400 status code'''
-        return {'message': 'What you want'}, 400       
-        
+        return {'message': 'What you want'}, 400
+
 
     @api.errorhandler(CustomException)
     def handle_custom_exception(error):
@@ -160,14 +160,14 @@ that you can do with Flask/Blueprint :meth:`@errorhandler <flask:flask.Flask.err
     def handle_fake_exception_with_header(error):
         '''Return a custom message and 400 status code'''
         return {'message': error.message}, 400, {'My-Header': 'Value'}
-        
-        
+
+
     @api.errorhandler(NoResultFound)
     def handle_no_result_exception(error):
         '''Return a custom not found error message and 404 status code'''
-        return {'message': error.specific}, 404        
-        
-        
+        return {'message': error.specific}, 404
+
+
 .. note ::
 
     A "NoResultFound" error with description is required by the OpenAPI 2.0 spec. The docstring in the error handle function is output in the swagger.json as the description.
@@ -209,7 +209,7 @@ It also allows for overriding the default error handler when used without parame
 
 .. note ::
 
-    Flask-RESTPlus will return a message in the error response by default.
+    flask-restplus-udata will return a message in the error response by default.
     If a custom response is required as an error and the message field is not needed,
     it can be disabled by setting ``ERROR_INCLUDE_MESSAGE`` to ``False`` in your application config.
 

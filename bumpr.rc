@@ -26,7 +26,7 @@ bump = {version} ({date:%Y-%m-%d})
 prepare = Current
 
 [readthedoc]
-id = flask-restplus
+id = flask-restplus-udata
 
 [replace]
 dev = ?branch=master
