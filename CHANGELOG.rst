@@ -3,8 +3,8 @@ Changelog
 
 .. currentmodule:: flask_restplus
 
-Current
--------
+0.14.0 (2022-07-12)
+-------------------
 
 - Ensure that exceptions raised in error handler, including programming errors, are logged (:issue:`705`, :pr:`706`)
 - Import the ABCs from 'collections.abc' instead of 'collections' by default as it is deprecated since Python3.7, and in 3.8 it will stop working. Python2.7 is still supported though.
