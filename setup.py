@@ -61,7 +61,7 @@ tests_require = pip('test')
 dev_require = tests_require + pip('develop')
 
 setup(
-    name='flask-restplus-udata-udata',
+    name='flask-restplus-udata',
     version=__version__,
     description="Temporary fork for update",
     url='https://github.com/quaxsze/flask_restplus_udata',
